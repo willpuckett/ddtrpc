@@ -8,7 +8,7 @@ import type { AppRouter } from './router.ts';
 const sleep = (ms = 100) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function main() {
-  const url = 'http://ddrpc.deno.dev/trpc';
+  const url = 'http://ddtrpc.deno.dev/trpc';
 
   const proxy = createTRPCProxyClient<AppRouter>({
     links: [loggerLink(), httpBatchLink({ url })],
